@@ -1,7 +1,17 @@
 # Platform Science SDET Homework Assignment
 
-Candidate: Shawn Shaligram 
+#### Candidate: Shawn Shaligram 
 ==========================================
+
+## Exuecting the tests
+Pre-Requisite
+- python -m pip install requests
+- pip install pytest-bdd
+- pltsci-sdet-assignment container up and running
+
+Running the test suite
+Once cloned, from the root of this repository run the following command:
+- pytest test_hoover_api.py
 
 ## Test Scenarios
 
@@ -48,11 +58,3 @@ Steps to reproduce:
 
 - Actual result:
 Returns 500 status code 
-
-## How to run test suite
-Requirements
-pip install requests
-pip install pytest-bdd
-pltsci-sdet-assignment container up and running
-Running the suite
-Once cloned, from the root of this repository run the following: mvn test
