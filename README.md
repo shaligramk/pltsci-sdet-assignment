@@ -1,4 +1,6 @@
-Shawn Shaligram Platform Science SDET Homework assignment
+# Platform Science SDET Homework Assignment
+
+Candidate: Shawn Shaligram 
 ==========================================
 
 ## Test Scenarios
@@ -10,7 +12,6 @@ Test scenarios are split into 3 main categories
 2. Verify error messaging/status code by passing in missing mandatory fields validation
 3. Verify error messaging/status code by passing in invalid values.
 
-
 ## Bugs
 The bugs found during execution are listed below:
 
@@ -18,9 +19,11 @@ The bugs found during execution are listed below:
 
 Steps to reproduce:
 Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
-{"roomSize" : [-10,-10], "coords" : [1,3], "patches" : [[1,0],[2,2],[3,3]], "instructions" : "NNNNNNESEESWNWW"}
+{"roomSize" : [-100,-100], "coords" : [1,3], "patches" : [[1,0],[2,2],[3,3]], "instructions" : "NNNNNNESEESWNWW"}
+
 Expected result:
 An error should be displayed informing the negative values are not allowed and status code should be 400.
+
 Actual result:
 Response shows a 200 status code.
 Missing roomSize field should display a 4xx error.
@@ -28,19 +31,23 @@ Missing roomSize field should display a 4xx error.
 Steps to reproduce:
 - Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
 {"coords" : [1,3], "patches" : [[1,0],[2,2],[3,3]], "instructions" : "NNNNNNESEESWNWW"}
+
 - Expected result:
 400 error should be displayed, error message should inform a missing required field is missing.
+
 - Actual result:
-500 error thrown.
-Missing body should display a 400 error.
+Returns 500 status code 
+Missing body should display a 4xx error.
 
 Steps to reproduce:
 - Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
 {}
+
 - Expected result:
 400 error should be displayed, error message should inform a missing body.
+
 - Actual result:
-500 error thrown.
+Returns 500 status code 
 
 ## How to run test suite
 Requirements
