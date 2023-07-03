@@ -1,7 +1,6 @@
 # Platform Science SDET Homework Assignment
 
 #### Candidate: Shawn Shaligram 
-==========================================
 
 ## Exuecting the tests
 Pre-Requisite
