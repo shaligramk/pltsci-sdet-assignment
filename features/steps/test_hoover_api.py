@@ -1,6 +1,6 @@
 import requests
 import json
-from behave import given, when, then
+from behave import *
 
 # Assuming the API endpoint URL
 API_URL = "http://example.com/hoover"
