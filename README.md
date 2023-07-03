@@ -21,39 +21,13 @@ Test scenarios are split into 3 main categories
 2. Verify error messaging/status code by passing in missing mandatory fields validation
 3. Verify error messaging/status code by passing in invalid values.
 
-## Bugs
-The bugs found during execution are listed below:
+## Bug Reports
+All defects are contained within the bug_reports.md file
 
-#### Test Case: 1 No negative values should be accepted for roomSize field.
+## Notes
 
-Steps to reproduce:
-Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
-{"roomSize" : [-100,-100], "coords" : [1,3], "patches" : [[1,0],[2,2],[3,3]], "instructions" : "NNNNNNESEESWNWW"}
-
-Expected result:
-An error should be displayed informing the negative values are not allowed and status code should be 400.
-
-Actual result:
-Response shows a 200 status code.
-Missing roomSize field should display a 4xx error.
-
-Steps to reproduce:
-- Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
-{"coords" : [1,3], "patches" : [[1,0],[2,2],[3,3]], "instructions" : "NNNNNNESEESWNWW"}
-
-- Expected result:
-400 error should be displayed, error message should inform a missing required field is missing.
-
-- Actual result:
-Returns 500 status code 
-Missing body should display a 4xx error.
-
-Steps to reproduce:
-- Send a request to 'http://localhost:8080/v1/cleaning-sessions' with the following body
-{}
-
-- Expected result:
-400 error should be displayed, error message should inform a missing body.
-
-- Actual result:
-Returns 500 status code 
+- Would consider testing the following scenarios if more time:
+   - Verify that the API response times are within acceptable limits under normal load conditions
+   - Conduct load testing by simulating concurrent requests and verify that the API can handle the expected load without degradation in performance.
+   - Verify that the API integrates correctly with any external systems or third-party services it depends on (e.g., database, payment gateway).
+   - Verify that the API handles edge cases and boundary conditions correctly (e.g., testing with minimum and maximum allowed values)
