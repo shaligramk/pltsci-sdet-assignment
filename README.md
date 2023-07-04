@@ -2,10 +2,10 @@
 
 #### Candidate: Shawn Shaligram 
 
-## Exuecting the tests
+## Running the tests
 Pre-Requisite
-- python -m pip install requests
-- pip install pytest-bdd
+- `python -m pip install requests`
+- `pip install pytest-bdd`
 - pltsci-sdet-assignment container up and running
 
 Running the test suite
