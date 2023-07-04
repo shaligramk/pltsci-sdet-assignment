@@ -10,7 +10,7 @@ Pre-Requisite
 
 Running the test suite
 Once cloned, from the root of this repository run the following command:
-- pytest test_hoover_api.py
+- run `behave`
 
 ## Test Scenarios
 

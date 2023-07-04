@@ -1,7 +1,7 @@
 Feature: Hoover Navigation Validation
 
 
-# Verify Goldenpath/Happy Path (P0 test cases)
+# Verify Goldenpath/Happy Path (P0 test cases) in test_valid_patches_and_coords.py
   Scenario Outline: Validate patches and coords are properly calculated for different roomSize and same coords and patches
     Given url 'http://localhost:8080/v1/cleaning-sessions'
     And request {"roomSize" : <roomSize>, "coords" : [2,1], "patches" : [[1,0],[2,2],[2,3]], "instructions" : "NNESEESWNWW"}
