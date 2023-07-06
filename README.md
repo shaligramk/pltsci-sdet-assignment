@@ -4,12 +4,12 @@
 
 ## Running the tests
 Pre-Requisite
-- `python -m pip install requests`
-- `pip install pytest-bdd`
+- `python -m pip install requests pytest-bdd behave PyHamcrest`
 - pltsci-sdet-assignment container up and running
 
 Running the test suite
 Once cloned, from the root of this repository run the following command:
+- cd features/
 - run `behave`
 
 ## Test Scenarios
