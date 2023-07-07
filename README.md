@@ -31,3 +31,6 @@ All defects are contained within the bug_reports.md file
    - Conduct load testing by simulating concurrent requests and verify that the API can handle the expected load without degradation in performance.
    - Verify that the API integrates correctly with any external systems or third-party services it depends on (e.g., database, payment gateway).
    - Verify that the API handles edge cases and boundary conditions correctly (e.g., testing with minimum and maximum allowed values)
+
+   - Since I'm not too familiar with BDD, I wrote an additional set of tests in the root directiory (test_goldenpath_requests_api.py and test_negative_scenarios.py) to showcase API testing efforts using python/requests library
+   - To run them, just do python <test_file> name
